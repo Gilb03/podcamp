@@ -12,8 +12,8 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
+
 header {
-    text-align: center;
     padding: 20px;
     background-image: url('mics.jpg');
     background-size: cover; /* Ensure the image covers the entire header */
@@ -23,9 +23,43 @@ header {
     color: #fff; /* Set default text color to white */
 }
 
+.w3-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 .w3-bar-item:hover {
     font-weight: bold; /* Make text bold on hover */
 }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            /*max-width: 1200px; /* Adjust the max-width as needed */
+            width: 100%;
+            padding: 10px; 
+        }
+
+        .column {
+            flex: 0 0 calc(33.33% - 20px); /* Adjust the width of each column and margin as needed */
+            margin-bottom: 90px; /* Adjust the margin between columns as needed */
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px; /* Example padding */
+            border-radius: 50px; /* Example border radius */
+        }
+
+
+
+        @media (max-width: 767px) {
+            .column {
+                flex: 0 0 100%; /* Set to full width on smaller screens */
+            }
+        }
 </style>
 </head>
 <body>
@@ -35,14 +69,12 @@ header {
     <div class="w3-bar  w3-card w3-left-align w3-large">
       <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-      <a href="about.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Contact</a>
+      <a href="mailto:gilbertking91@gmail.com?subject=Your%20Subject&body=Your%20Message" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white w3-right">Contact</a>
     </div>
   
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
       <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
-      <a href="about.html" class="w3-bar-item w3-button w3-padding-large">About</a>
       <a href="mailto:gilbertking91@gmail.com?subject=Your%20Subject&body=Your%20Message" target="_blank" class="w3-bar-item w3-button w3-padding-large">Contact</a>
     </div>
   </div>
@@ -51,20 +83,40 @@ header {
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
   <h1 class="w3-margin w3-jumbo">Streamline Your Sponsorship Strategy</h1>
   <p class="w3-xlarge">Harness Our Daily-Updated Database of Active Newsletter Sponsors for Predictable Sponsorship Outcomes.</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Access Now</button>
+  <a href="https://docs.google.com/forms/d/1OMhaep-7gN-wtLqyR1w_C0dAiAxh5oT6saBd3DwlzQU/prefill" target="_blank" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Access Now</a>
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-container w3-row-padding w3-padding-64 w3-center"> 
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Introducing Sponsored Leads</h1>
-      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
-    </div>
+      <h1 style="text-align:center">Introducing Sponsored Leads</h1>
+      <div class="container">
+      <div class="column">
+        <div class="row">
+            <p><strong>Comprehensive Database</strong></p>
+            <p>Our extensive monitoring of thousands of newsletters reveals who's sponsoring and who's likely to sponsor again, saving you precious research time.</p>
+        </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <p><strong>Detailed Contact Information</strong></p>
+            <p>For every potential sponsor, we provide up-to-date contact details of key decision-makers, simplifying your outreach process.</p>
+        </div>
+        </div>
+        <div class="column">
+            <p><strong>Easy-to-Use Interface</strong></p>
+            <p>Our Airtable-powered platform allows for seamless filtering, grouping, and sorting, making it easier to find the perfect match for your newsletter.</p>
+        </div>
+        
 
+
+      </div>
+      </div>
+    <!-- 
     <div class="w3-third w3-center">
       <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-    </div>
+    </div> -->
   </div>
 </div>
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
@@ -76,7 +128,7 @@ header {
      curated to optimize your team's outreach efforts...</p>
 </div>
 <!-- Second Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<!--<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-third w3-center">
       <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
@@ -84,15 +136,47 @@ header {
 
     <div class="w3-twothird">
       <h1>Why Choose Sponsored Leads</h1>
-      <div class="row">
+      <div class="container">
         <div class="col-md-4 col-xs-6 text-center" style="margin:0">
       <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
         </div>
     </div>
     </div>
   </div>
-</div>
+</div> -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1 style="text-align:center">Why Choose Sponsored Leads</h1>
+      <div class="container">
+      <div class="column">
+        <div class="row">
+            <p><strong>Immediate Leads</strong></p>
+            <p>Gain instant access to a vetted list of active sponsors as soon as you sign up. No waiting, no downtime, just immediate opportunities to grow your revenue.</p>
+        </div>
+        </div>
+        <div class="column">
+          <div class="row">
+            <p><strong>Daily Updates</strong></p>
+            <p>Your lead list is dynamic, with daily updates that ensure you have the freshest opportunities at your fingertips. Never miss out on a potential partnership.</p>
+        </div>
+        </div>
+        <div class="column">
+            <p><strong>Direct Outreach</strong></p>
+            <p>We provide you with direct contact information, including email addresses and LinkedIn profiles, so you can connect with decision-makers without barriers.</p>
+        </div>
+        
 
+
+      </div>
+      </div>
+    <!-- 
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div> -->
+  </div>
+</div>
+<!--
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
     <h1 class="w3-margin w3-xlarge">An embedded video of the database will be here in next iteration</h1>
 </div>
@@ -113,7 +197,7 @@ header {
       </div>
     </div>
   </div>
-
+-->
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity">  
   <div class="w3-xlarge w3-padding-32">
